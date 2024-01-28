@@ -1,0 +1,40 @@
+.b-grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 520px;
+}
+
+.b-grid img {
+    border: 3px solid #48ffc2;
+    border-radius: 10px;
+    background-color: aquamarine;
+}
+
+.card {
+    width: 125px;
+    height: 125px;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.front,
+.reverse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    transform: rotateY(180deg);
+}
